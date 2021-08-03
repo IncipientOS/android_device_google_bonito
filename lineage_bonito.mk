@@ -15,6 +15,9 @@ PRODUCT_NAME := lineage_bonito
 PRODUCT_MODEL := Pixel 3a XL
 PRODUCT_BRAND := google
 
+#MindTheGapps
+TARGET_GAPPS_ARCH = arm64
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=bonito \
     PRIVATE_BUILD_DESC="bonito-user 11 RQ3A.210705.001 7380771 release-keys"
