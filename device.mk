@@ -32,6 +32,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += ro.crypto.volume.filenames_mode=aes-256-cts
 
+# OpenGapps
+GAPPS_VARIANT := nano
+
 # enable cal by default on accel sensor
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.debug.sensors.accel_cal=1
@@ -879,6 +882,9 @@ else
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.verbose_logging_enabled=false
 endif
+
+# OpenGapps
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include hardware/google/pixel/pixelstats/device.mk
